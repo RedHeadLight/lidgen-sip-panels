@@ -1,9 +1,45 @@
+@use 'sass:math';
+
+// Подключение шрифтов локально из папки "./src/fonts" =======================================================================================================================
+@import 'config/fonts';
+
+// Подключение sass функций и миксинов и рассширений стилей =======================================================================================================================
+@import 'config/functions';
+@import 'config/mixins';
+@import 'config/patternSelectors';
+
+// Подключение переменных =======================================================================================================================
+@import 'config/vars';
+
+// Обнуление =======================================================================================================================
+@import 'config/reset';
+
+/* =======================================================================================================================
+* Библиотеки
+* раскомментировать для использования 
+*/
+// @import 'libs/aos';
+// @import 'libs/swiper';
+
+// Подлючение кастомного скрола для всего сайта =======================================================================================================================
+@import 'config/scrollbar';
+
+// Общие параметры, шаблоны(заготовки) и вспомагательные классы =======================================================================================================================
+@import 'config/base';
+
+// БЕМ блоки используемые во всё проекте =======================================================================================================================
+@import 'config/common';
+
+// Подключение стилей отдельных блоков и секций =======================================================================================================================
+@import 'layout/header';
+@import 'layout/footer';
+
 @font-face {
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 200 1000;
     font-display: swap;
-    src: url("./fonts/nunito.woff2") format('woff2');
+    src: url("../fonts/nunito.woff2") format('woff2');
 }
 
   @font-face {
@@ -11,12 +47,22 @@
     font-style: normal;
     font-weight: 200 800;
     font-display: swap;
-    src: url("./fonts/manrope.woff2") format('woff2');
+    src: url("../fonts/manrope.woff2") format('woff2');
 }
 
 *, *::before, *::after{
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
 
 button {
     cursor: pointer;
@@ -39,8 +85,8 @@ button {
 }
 
 .header__container {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12px;
+    padding-bottom: 12  px;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -56,21 +102,39 @@ button {
     font-family: "Manrope", sans-serif;
     color: #220;
     flex-grow: 1;
+    padding: 0;
 }
 
 .header__item {
     list-style-type: none;
+    width: 25%;
+}
+
+.header__link {
+    color: #220;
+    text-decoration: none;
     text-align: center;
     padding: 20px 12px;
     border: 2px solid #ebebd6;
-    width: 25%;
     border-radius: 5px;
+    display: block;
+    transition: 0.6s;
+}
+
+.header__link:hover {
+    background-color: #ebebd6;
 }
 
 .header__button {
     margin-left: auto;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.header-button {
+    background-color: #ebebd6;
+    padding: 12px;
+    text-align: right;
 }
 
 .header-button__number {
@@ -104,7 +168,7 @@ button {
 
 .hero__wrapper {
     background-repeat: repeat;
-    background-image: url("./images/pattern.svg");
+    background-image: url("../images/pattern.svg");
     background-size: 40px 40px;
     padding: 35px 40px 40px 40px;
     display: flex;
@@ -124,10 +188,12 @@ button {
     line-height: 1.1;
     font-size: 45px;
     font-weight: 700;
+    color: #fefefb;
 }
 
 .hero__subtitle {
     margin: 0;
+    color: #fefefb;
 }
 
 .hero__button {
@@ -137,6 +203,9 @@ button {
     background-color: #c51605;
     margin-top: auto;
     border: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
 }
 
 .advantages__list {
@@ -175,9 +244,17 @@ button {
     background-color: #d9d9d9;
 }
 
+.whywe {
+    margin-top: 160px;
+}
+
 .whywe__wrapper {
     display: flex;
     gap: 20px;
+}
+
+.whywe__title {
+    margin: 0 0 66px;
 }
 
 .whywe__list {
@@ -208,8 +285,16 @@ button {
     font-size: 16px;
     line-height: 1.3;
     margin: 0;
+    color: #676763;
 }
 
+.projects {
+    margin-top: 160px;
+}
+
+.projects__title {
+    margin: 0 0 64px;
+}
 
 .projects__list {
     padding: 0;
@@ -220,6 +305,12 @@ button {
 }
 
 .projects__card {
+    background-color: #fefefb;
+    border: 2px solid #ebebd6;
+    border-radius: 10px;
+}
+
+.projects-card:hover {
     background-color: #ebebd6;
 }
 
@@ -235,12 +326,17 @@ button {
 
 .projects-card__img {
     border-radius: 10px;
+    display: block;
+    margin: -2px -2px 0;
+    max-width: calc(100% + 4px);
+    width: calc(100% + 4px);
 }
 
 .projects-card__title {
     color: #676763;
     margin: 0;
     font-weight: 400;
+    font-size: 26px;
 }
 
 .projects-card__price {
@@ -263,8 +359,11 @@ button {
 .projects-card__point {
     border-radius: 5px;
     padding: 8px 16px;
-    border: 1px solid #ebebd6;
-    background-color: #fefefb;
+    background-color: #ebebd6;
+}
+
+.projects-card:hover .projects-card__point {
+    background-color: #fefefe;
 }
 
 .projects-card__button {
@@ -276,6 +375,13 @@ button {
     color: #fefefb;
     background-color: #c51605;
     border: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.form {
+    margin-top: 93px;
 }
 
 .form__container  {
@@ -288,7 +394,7 @@ button {
 .form__cover {
     width: 100%;
     background-repeat: repeat;
-    background-image: url("./images/pattern.svg");
+    background-image: url("../images/pattern.svg");
     background-size: 40px 40px;
     padding: 40px;
     font-weight: 400;
@@ -306,10 +412,12 @@ button {
     line-height: 1.1;
     margin: 0 0 12px;
     width: 55%;
+    color: #fefefb;
 }
 
 .form__subtitle {
     margin: 0 0 25px;
+    color: #fefefb; 
 }
 
 .form__photo {
@@ -349,15 +457,44 @@ button {
     background-color: #c51605;
     border: none;
     margin-top: auto;
+    line-height: 22px;
+}
+
+
+.form__checkbox-block {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 24px;
 }
 
 .form__checkbox {
-    margin-bottom: 24px;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    border: 1px solid #fefefb;
+    appearance: none;
+}
+
+.form__checkbox:checked {
+    background-color: #fefefb;
+}
+
+.form__checkbox-label {
+    color: #fefefb;
+}
+
+.about {
+    margin-top: 160px;
 }
 
 .about__wrapper {
     display: flex;
     gap: 20px;
+}
+
+.about__title {
+    margin: 0 0 64px;
 }
 
 .about__texts {
@@ -375,7 +512,7 @@ button {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.3;
-    color: #220;
+    color: #676763;
     margin: 0;
 }
 
@@ -412,6 +549,10 @@ button {
 
 .process {
     margin-top: 160px;
+}
+
+.process__title {
+    margin: 0 0 64px;
 }
 
 .process__list {
@@ -462,7 +603,7 @@ button {
     width: 12px;
     height: 20px;
     background-size: 12px 22px;
-    background-image: url(./images/arrow-next-icon.svg);
+    background-image: url("../images/arrow-next-icon.svg");
     background-repeat: no-repeat;
     position: absolute;
     right: 24px;
@@ -482,6 +623,7 @@ button {
 
 .process__description {
     margin: 0;
+    color: #676763;
 }
 
 .process__button {
@@ -494,6 +636,16 @@ button {
     border: none;
     margin: 0 auto;
     display: block;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.faq {
+    margin-top: 160px;
+}
+
+.faq__title {
+    margin: 0 0 64px;
 }
 
 .faq__accordion {
@@ -539,13 +691,14 @@ button {
     position: absolute;
     right: 0;
     top: 8px;
-    background-image: url(./images/arrow-down-icon.svg);
+    background-image: url("../images/arrow-down-icon.svg");
     background-size: 100%;
     transition: 0.6s;
 }
 
 .faq__accordion-text {
     display: none;
+    color: #676763;
 }
 
 .faq__accordion-item--opened {
@@ -560,6 +713,10 @@ button {
     display: block;
 }
 
+.consalting {
+    margin-top: 160px;
+}
+
 .consalting__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -569,7 +726,7 @@ button {
 
 .consalting__form {
     background-repeat: repeat;
-    background-image: url("./images/pattern.svg");
+    background-image: url("../images/pattern.svg");
     background-size: 40px 40px;
     padding: 40px;
     border-radius: 10px;
@@ -583,11 +740,14 @@ button {
 .consalting__title {
     line-height: 1.1;
     font-size: 42px;
+    color: #fefefb;
     margin: 0 0 12px;
 }
 
 .consalting__subtitle {
     max-width: 373px;
+    color: #ebebd6;
+    margin-bottom: 24px;
 }
 
 .consalting__wrapper input {
@@ -611,6 +771,26 @@ button {
 
 .consalting__checkbox-block {
     margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.consalting__checkbox {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    border: 1px solid #fefefb;
+    appearance: none;
+}
+
+.consalting__checkbox:checked {
+    background-color: #fefefb;
+}
+
+.form__checkbox-label {
+    font-size: 12px;
+    line-height: 16px;
 }
 
 .consalting__button {
@@ -624,13 +804,18 @@ button {
     color: #fefefb;
     background-color: #c51605;
     border: none;
+    line-height: 22px;
+}
+
+.footer {
+    margin-top: 40px;
+    margin-bottom: 24px;
 }
 
 .footer__container {
-    margin-top: 40px;
     padding: 24px;
     background-repeat: repeat;
-    background-image: url("./images/pattern.svg");
+    background-image: url("../images/pattern.svg");
     background-size: 40px 40px;
     border-radius: 10px;
 }
@@ -683,10 +868,16 @@ button {
 .footer__info {
     display: grid;
     gap: 20px;
+    color: #fefefb;    
+}
+
+.footer__info span {
+    color: #fefefb;    
 }
 
 .footer__policy {
     text-align: center;
+    color: #fefefb;
 }
 
 .modal-overlay {
@@ -731,7 +922,7 @@ button {
 .modal__wrapper {
     box-shadow: 0 10px 80px -5px rgba(0, 0, 0, 0.06);
     background-repeat: repeat;
-    background-image: url("./images/pattern.svg");
+    background-image: url("../images/pattern.svg");
     background-size: 40px 40px;
     border-radius: 10px;
     padding: 40px;

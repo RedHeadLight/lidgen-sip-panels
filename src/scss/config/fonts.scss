@@ -1,0 +1,31 @@
+@mixin includeFont($fontName, $fileName, $weight, $style) {
+  @font-face{
+    font-family: $fontName;
+    font-display: swap;
+    src: url('../fonts/#{$fileName}.woff2') format("woff2"), url("../fonts/#{$fileName}.woff") format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+//
+//@font-face {
+//  font-family: Inter;
+//  font-display: swap;
+//  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+//  font-weight: 700;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: Inter;
+//  font-display: swap;
+//  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+//  font-weight: 400;
+//  font-style: normal;
+//}
+
+
+@include includeFont('AvenirNextCyr-Bold', 'AvenirNextCyr-Bold', '700', 'normal');
+@include includeFont('AvenirNextCyr-BoldItalic', 'AvenirNextCyr-BoldItalic', '700', 'normal');
+@include includeFont('AvenirNextCyr-Medium', 'AvenirNextCyr-Medium', '500', 'normal');
+@include includeFont('AvenirNextCyr-Regular', 'AvenirNextCyr-Regular', '400', 'normal');
+@include includeFont('AvenirNext-DemiBold', 'AvenirNext-DemiBold', '700', 'normal');

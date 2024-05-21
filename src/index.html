@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Главная'
+})
+<body>
+@@include('html/header.html', {})
+<main>
+    <section class="hero">
+        <div class="hero__container container">
+            <div class="hero__wrapper">
+                    <h1>Преимущества домов из СИП-панелей</h1>
+                    <p class="hero__subtitle">Создаём современные энергоэффективные и экологичные дома
+                        из инновационных СИП-панелей — разумное решение для комфортной жизни</p>
+                <button class="hero__button open-modal" type="button">Оставить заявку</button>
+            </div>
+            <img src="./images/hero-photo.jpg" width="580" height="485" alt="изображение типового дома">
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="container advantages__container">
+            <ul class="advantages__list">
+                <li class="advantages__item">
+                    <h2>Самые лучшие дома</h2>
+                </li>
+                <li class="advantages__item">
+                    <h2>Самые лучшие дома</h2>
+                </li>
+                <li class="advantages__item">
+                    <h2>Самые лучшие дома</h2>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="whywe">
+        <div class="container whywe__container">
+            <h2 class="whywe__title title">Почему нас выбирают?</h2>
+            <div class="whywe__wrapper">
+                <img class="whywe__img" src="./images/whywe-photo.jpg" width="380" height="508" alt="фото типового дома">
+                <ul class="whywe__list">
+                    <li class="whywe__item">
+                        <h3>Высокая энергоэффективность</h3>
+                        <p>СИП-панели обладают превосходными теплоизоляционными свойствами благодаря использованию
+                            пенополистирола или других изоляционных материалов в качестве наполнителя между двумя
+                            слоями плит</p>
+                    </li>
+                    <li class="whywe__item">
+                        <h3>Быстрое и простое строительство</h3>
+                        <p>Технология сборки домов из СИП-панелей относительно несложная и не требует привлечения
+                            большого количества рабочих. Панели легко монтируются, что сокращает сроки строительства
+                            по сравнению с традиционными методами.</p>
+                    </li>
+                    <li class="whywe__item">
+                        <h3>Долговечность и прочность</h3>
+                        <p>Несмотря на свою лёгкость, СИП-панели обладают высокой прочностью и устойчивостью
+                            к деформациям. Они хорошо переносят перепады температур, влажности и другие
+                            неблагоприятные воздействия.</p>
+                    </li>
+                    <li class="whywe__item">
+                        <h3>Экологичность и безопасность</h3>
+                        <p>СИП-панели изготавливаются из натуральных материалов: древесина и изоляция из вспененного
+                            полистирола или других безвредных компонентов. Они не содержат токсичных веществ
+                            и не выделяют вредных испарений.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="catalog">
+        <div class="container projects__container">
+            <h3 class="projects__title title">Готовые проекты домов</h3>
+            <ul class="projects__list">
+                <li class="projects__card projects-card">
+                    <img class="projects-card__img" src="./images/projects-sip1.jpg" alt="фото типового дома сип-1">
+                    <div class="projects-card__text-wrapper">
+                        <h4 class="projects-card__title">Дом СИП-1</h4>
+                        <p class="projects-card__price">от 0,5 млн Р</p>
+                    </div>
+                    <ul class="projects-card__points">
+                        <li class="projects-card__point">31 м²</li>
+                        <li class="projects-card__point">1 этаж</li>
+                        <li class="projects-card__point">2 комнаты</li>
+                    </ul>
+                    <button class="projects-card__button open-modal">Узнать подробности</button>
+                </li>
+                <li class="projects__card projects-card">
+                    <img class="projects-card__img" src="./images/projects-sip2.jpg" alt="фото типового дома сип-2">
+                    <div class="projects-card__text-wrapper">
+                        <h4 class="projects-card__title">Дом СИП-2</h4>
+                        <p class="projects-card__price">от 2,2 млн Р</p>
+                    </div>
+                    <ul class="projects-card__points">
+                        <li class="projects-card__point">134 м²</li>
+                        <li class="projects-card__point">1 этаж</li>
+                        <li class="projects-card__point">4 комнаты</li>
+                    </ul>
+                    <button class="projects-card__button open-modal">Узнать подробности</button>
+                </li>
+                <li class="projects__card projects-card">
+                    <img class="projects-card__img" src="./images/projects-sip3.jpg" alt="фото типового дома сип-3">
+                    <div class="projects-card__text-wrapper">
+                        <h4 class="projects-card__title">Дом СИП-3</h4>
+                        <p class="projects-card__price">от 1,8 млн Р</p>
+                    </div>
+                    <ul class="projects-card__points">
+                        <li class="projects-card__point">110 м²</li>
+                        <li class="projects-card__point">2 этажа</li>
+                        <li class="projects-card__point">5 комнат</li>
+                    </ul>
+                    <button class="projects-card__button open-modal">Узнать подробности</button>
+                </li>
+                <li class="projects__card projects-card">
+                    <img class="projects-card__img" src="./images/projects-sip4.jpg" alt="фото типового дома сип-4">
+                    <div class="projects-card__text-wrapper">
+                        <h4 class="projects-card__title">Дом СИП-4</h4>
+                        <p class="projects-card__price">от 2,3 млн Р</p>
+                    </div>
+                    <ul class="projects-card__points">
+                        <li class="projects-card__point">142 м²</li>
+                        <li class="projects-card__point">2 этажа</li>
+                        <li class="projects-card__point">5 комнат</li>
+                    </ul>
+                    <button class="projects-card__button open-modal">Узнать подробности</button>
+                </li>
+                <li class="projects__card projects-card">
+                    <img class="projects-card__img" src="./images/projects-sip5.jpg" alt="фото типового дома сип-5">
+                    <div class="projects-card__text-wrapper">
+                        <h4 class="projects-card__title">Дом СИП-5</h4>
+                        <p class="projects-card__price">от 1,47 млн Р</p>
+                    </div>
+                    <ul class="projects-card__points">
+                        <li class="projects-card__point">90 м²</li>
+                        <li class="projects-card__point">1 этаж</li>
+                        <li class="projects-card__point">4 комнаты</li>
+                    </ul>
+                    <button class="projects-card__button open-modal">Узнать подробности</button>
+                </li>
+                <li class="projects__card projects-card">
+                    <img class="projects-card__img" src="./images/projects-sip6.jpg" alt="фото типового дома сип-6">
+                    <div class="projects-card__text-wrapper">
+                        <h4 class="projects-card__title">Дом СИП-6</h4>
+                        <p class="projects-card__price">от 1 млн Р</p>
+                    </div>
+                    <ul class="projects-card__points">
+                        <li class="projects-card__point">57 м²</li>
+                        <li class="projects-card__point">1 этаж</li>
+                        <li class="projects-card__point">3 комнаты</li>
+                    </ul>
+                    <button class="projects-card__button open-modal">Узнать подробности</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="form">
+        <div class="form__container container">
+            <div class="form__cover">
+                <h3 class="form__title">Получите скидку 10% на индивидуальный проект</h3>
+                <p class="form__subtitle">Оставьте свои контакты, наши специалисты свяжутся с вами</p>
+
+                <form class="form__wrapper">
+                    <div class="form__input-block">
+                        <input type="text" name="form-name" class="form__input" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form__input-block">
+                        <input type="tel" name="form-phone" class="form__input" placeholder="+7" required>
+                    </div>
+                    <div class="form__checkbox-block">
+                        <input class="form__checkbox" type="checkbox" name="form-checkbox" id="agreement" required>
+                        <label for="agreement" class="form__checkbox-label">Я соглашаюсь на обработку персональных
+                            данных</label>
+                    </div>
+                    <button class="form__button" type="submit">Отправить</button>
+                </form>
+            </div>
+            <img class="form__photo" src="./images/form-photo.png" width="506" height="515" alt="баннер формы">
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about__container container">
+            <h3 class="about__title title">О нас</h3>
+            <div class="about__wrapper">
+                <img src="./images/about-photo.jpg" width="580" height="424" alt="баннер блока О нас ">
+                <div class="about__texts">
+                    <div class="about__texts-wrapper">
+                        <p>Наша компания была основана в 2010 году группой единомышленников, которые были увлечены
+                            идеей создания экологичного и энергосберегающего жилья. С тех пор мы накопили богатый
+                            опыт и знания в области строительства из СИП-панелей.</p>
+                        <p>Одним из наших главных принципов — забота об окружающей среде. Поэтому мы используем
+                            только экологически чистые и возобновляемые материалы: древесина из ответственных
+                            источников и высококачественная изоляция. </p>
+                        <p>Мы предлагаем полный цикл услуг под ключ. Каждый дом создаётся с учётом индивидуальных
+                            потребностей и пожеланий клиента. Наши высококвалифицированные специалисты обеспечивают
+                            безупречное качество на всех этапах работы.</p>
+                    </div>
+                    <ul class="about__points">
+                        <li>
+                            <p class="about__point-title">50+</p>
+                            <p class="about__point">построили домов</p>
+                        </li>
+                        <li>
+                            <p class="about__point-title">15+</p>
+                            <p class="about__point">лет в сфере</p>
+                        </li>
+                        <li>
+                            <p class="about__point-title">8</p>
+                            <p class="about__point">бригад строителей</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="process" id="process">
+        <div class="process__container container">
+            <h3 class="process__title title">Процесс нашей работы</h3>
+            <ul class="process__list">
+                <li class="process__item">
+                    <p class="proccess__step">1 шаг</p>
+                    <p class="process__item-heading">Подготовительный этап</p>
+                    <div class="process__item-wrapper">
+                        <p class="process__item-heading process__item-heading--hidden">Подготовительный этап</p>
+                        <p class="process__description">На этом этапе производится тщательное планирование
+                            и проектирование будущего дома. Разрабатывается проектная документация, определяются размеры
+                            и конфигурация дома, производится расчёт необходимых материалов.</p>
+                    </div>
+                </li>
+                <li class="process__item">
+                    <p class="proccess__step">2 шаг</p>
+                    <p class="process__item-heading">Фундамент и цокольный этаж</p>
+                    <div class="process__item-wrapper">
+                    <p class="process__item-heading process__item-heading--hidden">Фундамент и цокольный этаж</p>
+                    <p class="process__description">Перед установкой панелей необходимо подготовить фундамент
+                        и цокольный этаж. Фундамент может быть из различных материалов: бетон, блоки или сваи.
+                        Цокольный этаж может быть выполнен из традиционных строительных материалов или
+                        из СИП-панелей.</p>
+                    </div>
+                </li>
+                <li class="process__item">
+                    <p class="proccess__step">3 шаг</p>
+                    <p class="process__item-heading">Сборка каркаса и монтаж СИП-панелей</p>
+                    <div class="process__item-wrapper">
+                    <p class="process__item-heading process__item-heading--hidden">Сборка каркаса и монтаж СИП-панелей</p>
+                    <p class="process__description">На этом этапе происходит основное строительство дома
+                        из СИП-панелей. По проекту собирается каркас, к которому крепятся панели. Они монтируются
+                        с помощью специальных крепежей и герметизируются для обеспечения изоляции.</p>
+                    </div>
+                </li>
+                <li class="process__item">
+                    <p class="proccess__step">4 шаг</p>
+                    <p class="process__item-heading">Отделочные работы</p>
+                    <div class="process__item-wrapper">
+                    <p class="process__item-heading process__item-heading--hidden">Отделочные работы</p>
+                    <p class="process__description">После монтажа СИП-панелей выполняются финишные отделочные
+                        работы: установка кровли, окон, дверей, внутренних перегородок, проведение инженерных
+                        коммуникаций и финишную отделку внутренних и наружных поверхностей.</p>
+                    </div>
+                </li>
+            </ul>
+            <button class="process__button open-modal" type="button">Оставить заявку</button>
+        </div>
+    </section>
+    <section class="faq" id="faq">
+        <div class="faq__container container">
+            <h3 class="faq__title title">Ответы на ваши вопросы</h3>
+            <ul class="faq__accordion">
+                <li class="faq__accordion-item">
+                    <button type="button" class="faq__accordion-heading">Какие виды фундамента можно использовать?</button>
+                    <p class="faq__accordion-text">Мы рекоммендуем свайно-винтовой фундамент, как идеальное
+                        соотношение цены и качества, но дома из СИП панелей можно устанавливать на любых видах
+                        фундаментов.</p>
+                </li>
+                <li class="faq__accordion-item">
+                    <button type="button" class="faq__accordion-heading">Сколько по времени строится дом из СИП-панелей?</button>
+                    <p class="faq__accordion-text">Мы рекоммендуем свайно-винтовой фундамент, как идеальное
+                        соотношение цены и качества, но дома из СИП панелей можно устанавливать на любых видах
+                        фундаментов.</p>
+                </li>
+                <li class="faq__accordion-item">
+                    <button type="button" class="faq__accordion-heading">Нуждается ли дома из СИП-панелей в дополнительном утеплении?
+                    </button>
+                    <p class="faq__accordion-text">Мы рекоммендуем свайно-винтовой фундамент, как идеальное
+                        соотношение цены и качества, но дома из СИП панелей можно устанавливать на любых видах
+                        фундаментов.</p>
+                </li>
+                <li class="faq__accordion-item">
+                    <button type="button" class="faq__accordion-heading">Какова высота потолков в домах из СИП-панелей?</button>
+                    <p class="faq__accordion-text">Мы рекоммендуем свайно-винтовой фундамент, как идеальное
+                        соотношение цены и качества, но дома из СИП панелей можно устанавливать на любых видах
+                        фундаментов.</p>
+                </li>
+                <li class="faq__accordion-item">
+                    <button type="button" class="faq__accordion-heading">Как относятся грызуны к такому материалу?</button>
+                    <p class="faq__accordion-text">Мы рекоммендуем свайно-винтовой фундамент, как идеальное
+                        соотношение цены и качества, но дома из СИП панелей можно устанавливать на любых видах
+                        фундаментов.</p>
+                </li>
+                <li class="faq__accordion-item">
+                    <button type="button" class="faq__accordion-heading">Сколько по времени разрабатывается проект по индивидуальному
+                        запросу?</button>
+                    <p class="faq__accordion-text">Мы рекоммендуем свайно-винтовой фундамент, как идеальное
+                        соотношение цены и качества, но дома из СИП панелей можно устанавливать на любых видах
+                        фундаментов.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="consalting">
+        <div class="consalting__container container">
+            <div class="consalting__form">
+                <h3 class="consalting__title">Остались вопросы?</h3>
+                <p class="consalting__subtitle">Наши специалисты готовы предоставить вам бесплатную консультацию и подробно ответить на все ваши вопросы.</p>
+                <form action="" class="consalting__fields">
+                    <div class="consalting__wrapper">
+                        <input type="text" class="consalting__field" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="consalting__wrapper">
+                        <input type="text" class="consalting__field" placeholder="+7" name="phone" required>
+                    </div>
+                    <div class="consalting__checkbox-block">
+                        <input class="consalting__checkbox" type="checkbox" name="form-checkbox" id="consalting-agreement" required>
+                        <label for="consalting-agreement" class="form__checkbox-label">Я соглашаюсь на обработку персональных
+                            данных</label>
+                    </div>
+                    <button class="consalting__button" type="button">Отправить</button>
+                </form>
+            </div>
+            <img src="" width="580" height="443" alt="карта расположения офиса" class="consalting__map">
+        </div>
+    </section>
+</main>
+@@include('html/blocks/modal.html', {})
+@@include('html/footer.html', {})
+@@include('html/script.html', {})
+</body>
+</html> 
