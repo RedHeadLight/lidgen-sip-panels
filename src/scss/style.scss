@@ -75,6 +75,12 @@ button {
     max-width: 1200px;
 }
 
+@media (max-width: 376px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
 .title {
     font-family: "Manrope", sans-serif;
     font-size: 42px;
@@ -84,12 +90,42 @@ button {
     margin-bottom: 64px;
 }
 
+@media (max-width: 376px) {
+    .title {
+        font-size: 24px;
+    }
+}
+
 .header__container {
     padding-top: 12px;
     padding-bottom: 12  px;
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+@media (max-width: 376px) {
+    .header__container {
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+.header__menu {
+    display: none;
+}
+
+@media (max-width: 376px) {
+    .header__menu {
+        display: block;
+        background-color: #fefefe;
+        border: none;
+    }
+}
+
+@media (max-width: 376px) {
+    .header__logo svg {
+        width: 120px;
+    }
 }
 
 .header__list {
@@ -103,6 +139,12 @@ button {
     color: #220;
     flex-grow: 1;
     padding: 0;
+}
+
+@media (max-width: 376px) {
+    .header__list {
+        display: none;
+    }
 }
 
 .header__item {
@@ -129,12 +171,19 @@ button {
     margin-left: auto;
     text-decoration: none;
     border-radius: 5px;
-}
-
-.header-button {
     background-color: #ebebd6;
     padding: 12px;
     text-align: right;
+}
+
+@media (max-width: 376px) {
+    .header-button {
+        padding: 0;
+        width: 100%;
+        min-width: 140px;
+        background-color: #fefefe;
+        margin-right: 8px;
+    }
 }
 
 .header-button__number {
@@ -150,6 +199,12 @@ button {
     text-align: right;
 }
 
+@media (max-width: 376px)  {
+    .header-button__text {
+        display: none;
+    }
+}
+
 .hero__container {
     font-family: "Manrope", sans-serif;
     font-style: 45px;
@@ -161,9 +216,22 @@ button {
     gap: 20px;
 }
 
+@media (max-width: 376px) {
+    .hero__container {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
 .hero__container img {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+@media (max-width: 376px) {
+    .hero__container img {
+        order: 1;
+        border-radius: 10px;
+    }
 }
 
 .hero__wrapper {
@@ -183,6 +251,16 @@ button {
     border-bottom-right-radius: 10px;
 }
 
+@media (max-width: 376px) {
+    .hero__wrapper {
+        order: 2;
+        gap: 16px;
+        padding: 32px 16px 28px;
+        border-radius: 10px;
+        min-height: 244px;
+    }
+}
+
 .hero__wrapper h1 {
     margin: 0;
     line-height: 1.1;
@@ -191,9 +269,25 @@ button {
     color: #fefefb;
 }
 
+@media (max-width: 376px) {
+    .hero__wrapper h1 {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.1;
+    }
+}
+
 .hero__subtitle {
     margin: 0;
     color: #fefefb;
+}
+
+@media (max-width: 376px) {
+    .hero__subtitle {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+    }
 }
 
 .hero__button {
@@ -208,6 +302,12 @@ button {
     line-height: 22px;
 }
 
+@media (max-width: 376px) {
+    .hero__button {
+        display: none;
+    }
+}
+
 .advantages__list {
     display: flex;
     list-style-type: none;
@@ -215,12 +315,48 @@ button {
     border-radius: 10px;
     padding: 10px 0;
 }
+ 
+@media (max-width: 376px) {
+    .advantages__list {
+        flex-direction: column;
+        border: 2px solid #ebebd6;
+        margin-bottom: 8px;
+    }
+}
 
 .advantages__item {
     width: 33%;
     max-width: 393px;
     color: #220;
     padding: 24px;
+}
+.advantages__item svg {
+    display: none;
+}
+
+@media (max-width: 376px) {
+    .advantages__item svg {
+        display: block;
+    }
+}
+
+@media (max-width: 376px) {
+    .advantages__item {
+        padding: 19px 16px 19px 24px;
+        border: 2px solid #ebebd6;
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        border: none;
+    }
+}
+ 
+@media (max-width: 376px) {
+    .advantages__item:nth-child(2) {
+        border-top: 2px solid #ebebd6;
+        border-bottom: 2px solid #ebebd6;
+    }
 }
 
 .advantages__item + .advantages__item {
@@ -234,6 +370,14 @@ button {
     line-height: 1.1;
 }
 
+@media (max-width: 376px) {
+    .advantages__item h2 {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+
 .advantages__item::before {
     content: "";
     width: 20px;
@@ -243,9 +387,39 @@ button {
     border-radius: 100%;
     background-color: #d9d9d9;
 }
+ 
+@media (max-width: 376px) {
+    .advantages__item::before {
+        display: none;
+    }
+}
 
+.advantages__button {
+    display: none;
+}
+
+@media (max-width: 376px) {
+    .advantages__button {
+        display: block;
+        border-radius: 10px;
+        padding: 16px 40px;
+        color: #fefefb;
+        background-color: #c51605;
+        margin-top: auto;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        width: 100%;
+    }
+}
 .whywe {
     margin-top: 160px;
+}
+
+@media (max-width: 376px) {
+    .whywe {
+        margin-top: 64px;
+    }
 }
 
 .whywe__wrapper {
@@ -253,8 +427,28 @@ button {
     gap: 20px;
 }
 
+@media (max-width: 376px) {
+    .whywe__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 376px) {
+    .whywe__wrapper img {
+        order: 2;
+    }
+}
+
 .whywe__title {
     margin: 0 0 66px;
+}
+
+@media (max-width: 376px) {
+    .whywe__title {
+        margin-bottom: 32px;
+    }
 }
 
 .whywe__list {
@@ -266,6 +460,14 @@ button {
     list-style-type: none;
 }
 
+@media (max-width: 376px) {
+    .whywe__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        order: 1;
+    }
+}
 .whywe__item {
     border: 1px solid #ebebd6;
     padding: 24px;
@@ -274,11 +476,24 @@ button {
     border-radius: 10px;
 }
 
+@media (max-width: 376px) {
+    .whywe__item{
+        border: 2px solid #ebebd6;
+    }
+}
 .whywe__item h3 {
     margin: 0 0 12px 0;
     font-size: 26px;
     font-weight: 400;
     line-height: 1.1;
+}
+
+@media (max-width: 376px) {
+    .whywe__item h3 {
+        font-size: 18px;
+        line-height: 1.2;
+        color: #220;
+    }
 }
 
 .whywe__item p {
@@ -288,12 +503,38 @@ button {
     color: #676763;
 }
 
+@media (max-width: 376px)  {
+    .whywe__item p {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 376px) {
+    .whywe__item h3 {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
+
 .projects {
     margin-top: 160px;
 }
 
+@media (max-width: 376px) {
+    .projects {
+        margin-top: 64px;
+    }
+}
+
 .projects__title {
     margin: 0 0 64px;
+}
+
+@media (max-width: 376px) {
+    .projects__title {
+        margin-bottom: 32px;
+    }
 }
 
 .projects__list {
@@ -302,6 +543,14 @@ button {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     list-style-type: none;
+}
+
+@media (max-width: 376px) {
+    .projects__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
 }
 
 .projects__card {
@@ -339,11 +588,24 @@ button {
     font-size: 26px;
 }
 
+@media (max-width: 376px) {
+    .projects-card__title {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
+
 .projects-card__price {
     color: #220;
     margin: 0;
 }
 
+@media (max-width: 376px) {
+    .projects-card__price {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
 .projects-card__points {
     padding: 0; 
     list-style-type: none;
@@ -354,6 +616,14 @@ button {
     display: flex;
     gap: 8px;
     padding: 0 16px 24px;
+}
+
+@media (max-width: 376px) {
+    .projects-card__points {
+        font-size: 14px;
+        line-height: 1.2;
+        padding: 0 8px 8px 8px;
+    }
 }
 
 .projects-card__point {
@@ -384,11 +654,23 @@ button {
     margin-top: 93px;
 }
 
+@media (max-width: 376px) {
+    .form {
+        margin-top: 64px;
+    }
+}
+
 .form__container  {
     display: flex;
     position: relative;
     padding-top: 67px;
     min-height: 515px;
+}
+
+@media (max-width: 376px) {
+    .form__container {
+        padding-top: 0;
+    }
 }
 
 .form__cover {
@@ -499,7 +781,7 @@ button {
 
 .about__texts {
     display: grid;
-    gap: 20px;
+    gap: 39px;
 }
 
 .about__texts-wrapper {
