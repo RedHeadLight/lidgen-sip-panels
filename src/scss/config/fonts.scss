@@ -2,11 +2,16 @@
   @font-face{
     font-family: $fontName;
     font-display: swap;
-    src: url('../fonts/#{$fileName}.woff2') format("woff2"), url("../fonts/#{$fileName}.woff") format("woff");
+    src: url('../fonts/#{$fileName}.woff2') format("woff2");
     font-weight: #{$weight};
     font-style: #{$style};
   }
 }
+
+@include includeFont('Nunito', 'nunito', 200 1000, 'normal');
+@include includeFont('Manrope', 'manrope', 200 800, 'normal');
+
+
 //
 //@font-face {
 //  font-family: Inter;
