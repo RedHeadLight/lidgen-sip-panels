@@ -1,0 +1,152 @@
+.projects {
+    margin-top: 160px;
+}
+
+@media (max-width: 1200px) {
+    .projects {
+        margin-top: 64px;
+    }
+}
+
+.projects__title {
+    margin: 0 0 64px;
+}
+
+@media (max-width: 1200px) {
+    .projects__title {
+        margin-bottom: 32px;
+    }
+}
+
+.projects__list {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    list-style-type: none;
+}
+
+@media (max-width: 1200px) {
+    .projects__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+.projects__card {
+    background-color: #fefefb;
+    border: 2px solid #ebebd6;
+    border-radius: 10px;
+}
+
+.projects-card__img-wrapper {
+    flex-shrink: 0;
+    height: 271px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: -2px -2px 0;
+    max-width: calc(100% + 4px);
+    width: calc(100% + 4px);
+}
+
+@media (max-width: 1200px) {
+    .projects-card__img-wrapper {
+        aspect-ratio: 343/200;
+        height: auto;
+    }
+}
+
+.projects-card:hover {
+    background-color: #ebebd6;
+    transition: 0.6s;
+}
+
+.projects-card__text-wrapper {
+    font-size: 26px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 16px 12px;
+}
+
+@media (max-width: 1200px) {
+    .projects-card__text-wrapper {
+        padding: 16px 8px 6px ;
+    }
+}
+
+.projects-card__title {
+    color: #676763;
+    margin: 0;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+@media (max-width: 1200px) {
+    .projects-card__title {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
+
+.projects-card__price {
+    color: #220;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .projects-card__price {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
+.projects-card__points {
+    padding: 0; 
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #220;
+    display: flex;
+    gap: 8px;
+    padding: 0 16px 24px;
+}
+
+@media (max-width: 1200px) {
+    .projects-card__points {
+        font-size: 14px;
+        line-height: 1.2;
+        padding: 0 8px 8px 8px;
+    }
+}
+
+.projects-card__point {
+    border-radius: 5px;
+    padding: 8px 16px;
+    background-color: #ebebd6;
+}
+
+.projects-card:hover .projects-card__point {
+    background-color: #fefefe;
+}
+
+.projects-card__button {
+    border-radius: 10px;
+    padding: 16px 40px;
+    width: 100%;
+    max-width: 380px;
+    cursor: pointer;
+    color: #fefefb;
+    background-color: #c51605;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+@media (max-width: 1200px) {
+    .projects-card__button {
+        max-width: 100%;
+    }
+}

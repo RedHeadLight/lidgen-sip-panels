@@ -1,0 +1,40 @@
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 24px;
+    }
+}

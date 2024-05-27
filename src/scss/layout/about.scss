@@ -1,0 +1,130 @@
+.about {
+    margin-top: 160px;
+}
+
+@media (max-width: 1200px) {
+    .about {
+        margin-top: 64px;
+    }
+}
+
+.about__wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .about__wrapper {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 1200px)  {
+    .about__wrapper img {
+        order: 2;
+        aspect-ratio: 343/240;
+        height: auto;
+        width: 100%;
+    }
+}
+
+.about__title {
+    margin: 0 0 64px;
+}
+
+@media (max-width: 1200px)  {
+    .about__title {
+        margin: 0 0 32px;
+    }
+}
+
+.about__texts {
+    display: grid;
+    gap: 39px;
+}
+
+@media (max-width: 1200px) {
+    .about__texts {
+        gap: 8px;
+        grid-template-columns: 100%;
+    }
+}
+
+.about__texts-wrapper {
+    display: grid;
+    gap: 24px;
+}
+
+@media (max-width: 1200px) {
+    .about__texts-wrapper {
+        gap: 14px;
+    }
+}
+
+.about__texts-wrapper p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #676763;
+    margin: 0;
+}
+
+@media (max-width: 1200px)  {
+    .about__texts-wrapper p {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+
+.about__points {
+    padding: 12px;
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .about__points {
+        gap: 8px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.about__points li {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    border: 2px solid #ebebd6;
+    border-radius: 10px;
+}
+
+@media (max-width: 1200px)  {
+    .about__points li {
+        padding: 8px;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+
+.about__point-title {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0 0 6px;
+    color: #c51605;
+}
+
+@media (max-width: 1200px)  {
+    .about__point-title {
+        font-size: 28px;
+    }
+}
+
+.about__point {
+    margin: 0;
+}

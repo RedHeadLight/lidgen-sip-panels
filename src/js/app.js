@@ -13,6 +13,45 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
         })
     })
     
+    let menuBtn = document.querySelector(".header__menu")
+    let mobileMenu = document.querySelector(".header__list")
+
+    if(menuBtn && mobileMenu){
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('header__list--opened')
+            mobileMenu.classList.toggle('header__list--closed')
+            menuBtn.classList.toggle('header__menu--active')
+        })
+    }
+
+
+    if (document.getElementById('map')) {
+        let addr = $('.js-map').data('addr'),
+            x    = $(".js-map").data('x'),
+            y    = $(".js-map").data('y')
+
+        ymaps.ready(init);
+
+        function init() {
+            let Map = new ymaps.Map("map", {
+                center: [x, y],
+                zoom: 10,
+                controls: [
+                    'zoomControl',
+                    'rulerControl',
+                    'routeButtonControl',
+                ]
+            });
+            Map.behaviors.disable('scrollZoom');
+            let mark = new ymaps.Placemark([x, y], {
+                hint: 'Сервисный центр ',
+                balloonContent: addr,
+            });
+
+            Map.geoObjects.add(mark);
+        }
+    }
+
     // let openModalBtns = document.querySelectorAll(".open-modal")
     // let modal = document.querySelector(".modal")
     // let modalOverlay = document.querySelector(".modal-overlay")

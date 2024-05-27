@@ -212,7 +212,7 @@
                         <div class="form__input-block">
                             <input type="text" name="form-name" class="form__input" placeholder="Ваше имя" required>
                         </div>
-                        <div class="form__input-block">
+                        <div class="form__input-block form__input-block--tel">
                             <input type="tel" name="form-phone" class="form__input" placeholder="+7" required>
                         </div>
                         <div class="form__checkbox-block">
@@ -390,7 +390,7 @@
                         <div class="consalting__wrapper">
                             <input type="text" class="consalting__field" name="name" placeholder="Ваше имя" required>
                         </div>
-                        <div class="consalting__wrapper">
+                        <div class="consalting__wrapper consalting__wrapper--tel">
                             <input type="text" class="consalting__field" placeholder="+7" name="phone" required>
                         </div>
                         <div class="consalting__checkbox-block">
@@ -403,7 +403,11 @@
                         <button class="consalting__button" type="submit">Отправить</button>
                     </form>
                 </div>
-                <img src="" width="580" height="443" alt="карта расположения офиса" class="consalting__map">
+                <div class="contact-map">
+                    <div itemprop="hasMap" id="map" class="contacts__map js-map" style="width: 100%; height: 100%;"
+                         data-addr="Москва, ул. Декабристов, д. 20к2" data-x="55.862343"
+                         data-y="37.608949"></div>
+                </div>
             </div>
         </section>
     </main>
