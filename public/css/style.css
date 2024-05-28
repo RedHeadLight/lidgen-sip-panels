@@ -711,6 +711,10 @@ button {
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
+  transition: background 0.6s;
+}
+.hero__button:hover {
+  background-color: #990E01;
 }
 
 @media (max-width: 1200px) {
@@ -1056,6 +1060,10 @@ button {
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
+  transition: background 0.6s;
+}
+.projects-card__button:hover {
+  background-color: #990E01;
 }
 
 @media (max-width: 1200px) {
@@ -1234,6 +1242,10 @@ button {
   border: none;
   margin-top: auto;
   line-height: 22px;
+  transition: background 0.6s;
+}
+.form__button:hover {
+  background-color: #990E01;
 }
 
 @media (max-width: 1200px) {
@@ -1515,6 +1527,10 @@ button {
   display: block;
   font-size: 16px;
   line-height: 22px;
+  transition: background 0.6s;
+}
+.process__button:hover {
+  background-color: #990E01;
 }
 
 @media (max-width: 1200px) {
@@ -1772,6 +1788,10 @@ button {
   background-color: #c51605;
   border: none;
   line-height: 22px;
+  transition: background 0.6s;
+}
+.consalting__button:hover {
+  background-color: #990E01;
 }
 
 @media (max-width: 1200px) {
