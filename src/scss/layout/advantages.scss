@@ -25,7 +25,7 @@
 
 @media (max-width: 1200px) {
     .advantages__item {
-        padding: 16px 16px 16px 24px;
+        padding: 19px 16px;
         border: 2px solid #ebebd6;
         width: 100%;
         display: flex;
@@ -93,5 +93,10 @@
         font-size: 16px;
         font-weight: 700;
         width: 100%;
+        transition: background 0.6s;
+
+        &:hover {
+            background-color: #990E01;
+        }
     }
 }

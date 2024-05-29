@@ -13,12 +13,6 @@
     }
 }
 
-@media (max-width: 1200px) {
-    .modal {
-        align-items: flex-end;
-    padding-bottom: 0;
-    }
-}
 
 .modal--hidden {
     display: none;
@@ -45,12 +39,32 @@
     align-items: center;
 }
 
+
+@media (max-width: 1200px) {
+    .modal__wrapper {
+        position: relative;
+        padding: 40px 20px 56px;
+        box-shadow: 0 10px 80px -5px rgba(0, 0, 0, 0.06);
+        border-radius: 10px 10px 0 0;
+        border-radius: 10px;
+        display: block;
+        text-align: left;
+    }
+}
+
 .modal__title {
     font-size: 42px;
     font-weight: 700;
     line-height: 1.1;
     margin: 0 0 10px;
     color: #ebebd6;
+}
+
+@media (max-width: 1200px) {
+    .modal__title {
+        margin-bottom: 8px;
+        font-size: 24px;
+    }
 }
 
 .modal__subtitle {
@@ -63,34 +77,21 @@
 }
 
 @media (max-width: 1200px) {
-    .modal__wrapper {
-        position: relative;
-        padding: 40px 20px 56px;
-        box-shadow: 0 10px 80px -5px rgba(0, 0, 0, 0.06);
-        border-radius: 10px 10px 0 0;
-        border-radius: 10px;
-        max-height: 90vh;
-        height: 381px;
-        justify-content: flex-start;
-        overflow-y: auto;
-    }
-
-    .modal__wrapper::before {
-        content: "";
-        width: 35px;
-        height: 4px;
-        background-color: #000000;
-        opacity: 0.08;
-        border-radius: 8px;
-        position: absolute;
-        top: 12px;
-        left: 50%;
-        transform: translateX(-50%);
+    .modal__subtitle {
+        margin-bottom: 32px;
+        font-size: 14px;
+        line-height: 1.2;
     }
 }
 
 .modal__fields-wrapper {
     margin-bottom: 24px;
+}
+
+@media (max-width: 1200px) {
+    .modal__fields-wrapper {
+        margin-bottom: 16px;
+    }
 }
 
 .modal__input {
@@ -108,7 +109,7 @@
 
 @media (max-width: 1200px) {
     .modal__input {
-        width: 311px;
+        width: 100%;
         padding: 16px 24px;
         margin-bottom: 8px;
         background: #9c9c30;
@@ -132,6 +133,7 @@
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25)
 }
 
+
 .modal__input-wrapper--tel input {
     padding-left: 63px;
 }
@@ -144,11 +146,16 @@
     color: #ebebd6;
 }
 
+@media (max-width: 1200px) {
+    .modal__checkbox-label {
+        font-size: 12px;
+    }
+}
+
 .modal__button {
     border-radius: 10px;
     padding: 16px 40px;
     width: 100%;
-    max-width: 166px;
     font-size: 16px;
     font-weight: 700;
     color: #fefefb;

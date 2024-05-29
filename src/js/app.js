@@ -51,30 +51,15 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
             Map.geoObjects.add(mark);
         }
     }
-
-    // let openModalBtns = document.querySelectorAll(".open-modal")
-    // let modal = document.querySelector(".modal")
-    // let modalOverlay = document.querySelector(".modal-overlay")
-    //
-    // openModalBtns.forEach((item) => {
-    //     item.addEventListener("click", () => {
-    //         modal.classList.remove("modal--hidden")
-    //         modalOverlay.classList.remove("modal-overlay--hidden")
-    //     })
-    // })
-    //
-    // let modalCloseBtn = document.querySelector(".modal__close")
-    //
-    // modalCloseBtn.addEventListener("click", () => {
-    //     modal.classList.add("modal--hidden")
-    //     modalOverlay.classList.add("modal-overlay--hidden")
-    // })
+    
+    let processItems = document.querySelectorAll(".process__item")
+    processItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            item.classList.toggle("process__item--active")
+        })
+    } )
 });
 
-
-// Паралакс мышей ========================================================================================
-// const mousePrlx = new MousePRLX({})
-// =======================================================================================================
 
 // Фиксированный header ==================================================================================
 headerFixed()

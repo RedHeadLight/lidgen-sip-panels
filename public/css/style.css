@@ -307,8 +307,8 @@ button {
     gap: 0;
     justify-content: space-between;
     align-items: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     position: relative;
   }
 }
@@ -484,7 +484,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 32px 10px;
+    gap: 0;
   }
 }
 .footer__container svg {
@@ -517,6 +517,7 @@ button {
     width: 100%;
     flex-direction: column;
     gap: 16px;
+    margin-top: 32px;
   }
 }
 .footer__menu-link {
@@ -532,6 +533,7 @@ button {
   .footer__tel-wrapper {
     text-align: center;
     width: 100%;
+    margin-top: 16px;
   }
 }
 .footer__tel-wrapper span {
@@ -544,7 +546,7 @@ button {
 @media (max-width: 1200px) {
   .footer__tel-wrapper span {
     display: table;
-    margin: 0 auto;
+    margin: 4px auto 0;
   }
 }
 .footer__tel {
@@ -585,6 +587,7 @@ button {
     line-height: 1.2;
     font-weight: 400;
     opacity: 0.6;
+    margin-top: 32px;
   }
 }
 .footer__info {
@@ -628,6 +631,7 @@ button {
   .hero__container {
     flex-direction: column;
     gap: 8px;
+    padding: 16px;
   }
 }
 .hero__img-wrapper {
@@ -747,7 +751,7 @@ button {
 
 @media (max-width: 1200px) {
   .advantages__item {
-    padding: 16px 16px 16px 24px;
+    padding: 19px 16px;
     border: 2px solid #ebebd6;
     width: 100%;
     display: flex;
@@ -810,6 +814,10 @@ button {
     font-size: 16px;
     font-weight: 700;
     width: 100%;
+    transition: background 0.6s;
+  }
+  .advantages__button:hover {
+    background-color: #990E01;
   }
 }
 .whywe {
@@ -901,6 +909,7 @@ button {
     font-size: 18px;
     line-height: 1.2;
     color: #220;
+    margin-bottom: 8px;
   }
 }
 .whywe__item p {
@@ -1250,7 +1259,7 @@ button {
 
 @media (max-width: 1200px) {
   .form__button {
-    max-width: 311px;
+    max-width: 100%;
   }
 }
 .form__checkbox-block {
@@ -1471,7 +1480,7 @@ button {
   transition: 0.6s;
 }
 
-.process__item:hover .process__item-wrapper {
+.process__item--active .process__item-wrapper {
   top: 0;
   transition: 0.6s;
 }
@@ -1796,7 +1805,7 @@ button {
 
 @media (max-width: 1200px) {
   .consalting__button {
-    max-width: 311px;
+    max-width: 100%;
   }
 }
 .contact-map {
@@ -1825,12 +1834,6 @@ button {
   position: relative;
 }
 
-@media (max-width: 1200px) {
-  .modal {
-    align-items: flex-end;
-    padding-bottom: 0;
-  }
-}
 .modal--hidden {
   display: none;
 }
@@ -1856,6 +1859,17 @@ button {
   align-items: center;
 }
 
+@media (max-width: 1200px) {
+  .modal__wrapper {
+    position: relative;
+    padding: 40px 20px 56px;
+    box-shadow: 0 10px 80px -5px rgba(0, 0, 0, 0.06);
+    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
+    display: block;
+    text-align: left;
+  }
+}
 .modal__title {
   font-size: 42px;
   font-weight: 700;
@@ -1864,6 +1878,12 @@ button {
   color: #ebebd6;
 }
 
+@media (max-width: 1200px) {
+  .modal__title {
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+}
 .modal__subtitle {
   margin: 0 0 24px;
   width: 300px;
@@ -1874,34 +1894,21 @@ button {
 }
 
 @media (max-width: 1200px) {
-  .modal__wrapper {
-    position: relative;
-    padding: 40px 20px 56px;
-    box-shadow: 0 10px 80px -5px rgba(0, 0, 0, 0.06);
-    border-radius: 10px 10px 0 0;
-    border-radius: 10px;
-    max-height: 90vh;
-    height: 381px;
-    justify-content: flex-start;
-    overflow-y: auto;
-  }
-  .modal__wrapper::before {
-    content: "";
-    width: 35px;
-    height: 4px;
-    background-color: #000000;
-    opacity: 0.08;
-    border-radius: 8px;
-    position: absolute;
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
+  .modal__subtitle {
+    margin-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.2;
   }
 }
 .modal__fields-wrapper {
   margin-bottom: 24px;
 }
 
+@media (max-width: 1200px) {
+  .modal__fields-wrapper {
+    margin-bottom: 16px;
+  }
+}
 .modal__input {
   border: 1px solid #fefefb;
   border-radius: 10px;
@@ -1917,7 +1924,7 @@ button {
 
 @media (max-width: 1200px) {
   .modal__input {
-    width: 311px;
+    width: 100%;
     padding: 16px 24px;
     margin-bottom: 8px;
     background: #9c9c30;
@@ -1954,11 +1961,15 @@ button {
   color: #ebebd6;
 }
 
+@media (max-width: 1200px) {
+  .modal__checkbox-label {
+    font-size: 12px;
+  }
+}
 .modal__button {
   border-radius: 10px;
   padding: 16px 40px;
   width: 100%;
-  max-width: 166px;
   font-size: 16px;
   font-weight: 700;
   color: #fefefb;
