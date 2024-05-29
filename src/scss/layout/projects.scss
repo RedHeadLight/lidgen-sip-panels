@@ -38,6 +38,7 @@
     background-color: #fefefb;
     border: 2px solid #ebebd6;
     border-radius: 10px;
+    transition: 0.6s;
 }
 
 .projects-card__img-wrapper {
@@ -59,7 +60,6 @@
 
 .projects-card:hover {
     background-color: #ebebd6;
-    transition: 0.6s;
 }
 
 .projects-card__text-wrapper {
@@ -125,6 +125,7 @@
     border-radius: 5px;
     padding: 8px 16px;
     background-color: #ebebd6;
+    transition: 0.6s;
 }
 
 .projects-card:hover .projects-card__point {
