@@ -8,10 +8,11 @@
   }
 }
 
-@include includeFont('Nunito', 'nunito', 200 1000, 'normal');
-@include includeFont('Manrope', 'manrope', 400, 'normal');
-@include includeFont('Manrope', 'manrope', 800, 'normal');
-@include includeFont('Manrope', 'manrope', 700, 'normal');
+@include includeFont('Nunito', 'nunito', 200, 'normal');
+@include includeFont('Nunito', 'nunito', 1000, 'normal');
+@include includeFont('manrope', 'Manrope-Regular', 400, 'normal');
+@include includeFont('manrope', 'Manrope-ExtraBold', 800, 'normal');
+@include includeFont('manrope', 'Manrope-Bold', 700, 'normal');
 
 
 //
