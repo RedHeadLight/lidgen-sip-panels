@@ -24,6 +24,13 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
         })
     }
 
+    if(document.querySelector('input[name="phone"]')) {
+        let inputsPhone = document.querySelectorAll('input[name="phone"]')
+        inputsPhone.forEach(input => {
+            $(input).mask('+7 (999) 999-99-99')
+        })
+    }
+
 
     if (document.getElementById('map')) {
         let addr = $('.js-map').data('addr'),

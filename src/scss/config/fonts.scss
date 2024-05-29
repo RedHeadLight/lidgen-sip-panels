@@ -9,7 +9,9 @@
 }
 
 @include includeFont('Nunito', 'nunito', 200 1000, 'normal');
-@include includeFont('Manrope', 'manrope', 200 800, 'normal');
+@include includeFont('Manrope', 'manrope', 400, 'normal');
+@include includeFont('Manrope', 'manrope', 800, 'normal');
+@include includeFont('Manrope', 'manrope', 700, 'normal');
 
 
 //

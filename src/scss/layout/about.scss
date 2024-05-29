@@ -1,5 +1,11 @@
 .about {
     margin-top: 160px;
+    &-imgBx {
+        width: 100%;
+        max-width: 580px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -10,6 +16,7 @@
 
 .about__wrapper {
     display: flex;
+    align-items: stretch;
     gap: 20px;
 }
 
@@ -42,6 +49,8 @@
 .about__texts {
     display: grid;
     gap: 39px;
+    width: 100%;
+    max-width: 580px;
 }
 
 @media (max-width: 1200px) {
@@ -78,9 +87,9 @@
 }
 
 .about__points {
-    padding: 12px;
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 20px;
     list-style-type: none;
     margin: 0;
 }
