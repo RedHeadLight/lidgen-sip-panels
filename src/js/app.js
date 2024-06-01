@@ -18,11 +18,23 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
 
     if(menuBtn && mobileMenu){
         menuBtn.addEventListener('click', () => {
+            document.body.classList.toggle('scroll-off')
             mobileMenu.classList.toggle('header__list--opened')
             mobileMenu.classList.toggle('header__list--closed')
             menuBtn.classList.toggle('header__menu--active')
         })
     }
+
+    let menuItems = document.querySelectorAll('.header__link')
+    menuItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            document.body.classList.remove('scroll-off')
+            mobileMenu.classList.remove('header__list--opened')
+            mobileMenu.classList.add('header__list--closed')
+            menuBtn.classList.toggle('header__menu--active')
+        })
+    })
+
 
     if(document.querySelector('input[name="phone"]')) {
         let inputsPhone = document.querySelectorAll('input[name="phone"]')
@@ -58,13 +70,38 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
             Map.geoObjects.add(mark);
         }
     }
-    
+
+    let processList = document.querySelector(".process__list")
+    if(processList){
+        processList.addEventListener('click', () => {
+            document.body.classList.remove('mobile-scroll-off')
+            processList.classList.remove("process__list--active")
+            let activeItem = processList.querySelector(".process__item--active")
+            if(activeItem){
+                activeItem.classList.remove("process__item--active")
+            }
+        })
+    }
+
     let processItems = document.querySelectorAll(".process__item")
     processItems.forEach((item) => {
-        item.addEventListener('click', () => {
-            item.classList.toggle("process__item--active")
+        item.addEventListener('click', (evt) => {
+            evt.stopPropagation()
+            document.body.classList.add('mobile-scroll-off')
+            item.closest(".process__list").classList.add("process__list--active")
+            item.classList.add("process__item--active")
         })
-    } )
+    })
+
+    let processItemsCloseBtns = document.querySelectorAll(".process__item-close")
+    processItemsCloseBtns.forEach((item) => {
+        item.addEventListener("click", (evt) => {
+            evt.stopPropagation()
+            document.body.classList.remove('mobile-scroll-off')
+            item.closest(".process__list").classList.remove("process__list--active")
+            item.closest(".process__item").classList.remove("process__item--active")
+        })
+    })
 });
 
 

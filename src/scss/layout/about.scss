@@ -8,9 +8,20 @@
     }
 }
 
+
 @media (max-width: 1200px) {
     .about {
         margin-top: 64px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .about-imgBx {
+        order: 2;
+        aspect-ratio: 343/240;
+        height: auto;
+        width: 100%;
     }
 }
 
